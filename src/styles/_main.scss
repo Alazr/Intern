@@ -1,0 +1,35 @@
+.files-container {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  overflow-y: auto;
+}
+
+.file {
+  .file__content {
+    flex-basis: 150px;
+    height: 150px;
+    object-fit: cover;
+    &:hover + .del--icon {
+      display: inline-block;
+    }
+  }
+  z-index: 1;
+  position: relative;
+  margin: 1rem;
+}
+
+.del--icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.del--icon:hover {
+  display: inline-block;
+}

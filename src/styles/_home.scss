@@ -1,0 +1,131 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.list {
+  width: 100%;
+}
+.list__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+  transition: color 0.1s;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.list__item a {
+  color: #555;
+  display: block;
+  height: 100%;
+}
+
+.list__item a:hover {
+  color: #000;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.collapsible__content.active {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+  .list {
+    width: auto;
+  }
+  .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+  }
+  .list__item {
+    display: inline-block;
+    border-bottom: none;
+    margin-right: 3rem;
+  }
+  .logo {
+    flex: 1;
+  }
+  .menu {
+    display: none;
+  }
+  .main {
+    width: 80%;
+  }
+}
+
+.main {
+  width: 70%;
+  margin: auto;
+  max-width: 1140px;
+  background-color: #fff;
+  height: 75vh;
+  margin-top: 2rem;
+}
+
+.upload-section {
+  cursor: pointer;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  background-color: white;
+  margin-top: 1rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  input{
+    flex-grow:1;
+  }
+}
+
+.upload {
+  //   position: absolute;
+  //   bottom: 3%;
+  //   left: 50%;
+  //   transform: translate(-50%, 10%);
+  display: inline-block;
+  background: #1f85eb;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.modal {
+  background-color: white;
+  width: 20%;
+  height: 20vh;
+  border-radius: 10px;
+}
